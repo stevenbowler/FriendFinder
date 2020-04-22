@@ -1,0 +1,19 @@
+{
+  "name": "friendfinder",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "doc": "jsdoc -c jsdoc.json -R README.md",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch": "nodemon server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bootstrap": "^4.4.1",
+    "express": "^4.17.1",
+    "jsdoc": "^3.6.4",
+    "nodemon": "^2.0.3"
+  }
+}
