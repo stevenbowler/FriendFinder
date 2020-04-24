@@ -9,7 +9,7 @@ Attribution: List of best 250 hard words for hangman from this site: [hangman.co
 
 First, watch this video: _*[FriendFinder](https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view)*_
 
-To use the app click [FriendFinder](https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view)
+To use the app click [FriendFinder](https://intense-ravine-38720.herokuapp.com/)
 1. Enter `node index`
 2. Will display `The word is: _ _ _ _ _ _` where underscores show number of letters in the word.
 3. You will be prompted `Guess the next letter?`
