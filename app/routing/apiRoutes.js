@@ -115,7 +115,7 @@ router.post("/friends", function (req, res) {
     friends.push(newFriend);
     console.log(matchFriend);
     updateFriendsJS(friends);
-    sendMail(newFriend.email, matchFriend.email);  // send both parties and email that they have found their match
+    sendMail(newFriend, matchFriend);  // send both parties and email that they have found their match
     res.json(matchFriend);
 });
 

@@ -65,14 +65,14 @@ var mailOptions = {
  * @namespace sendEmail
  * @memberof nodemailer
  * @function sendEmail
- * @param {string} newFriend 
- * @param {string} matchFriend 
+ * @param {object} newFriend 
+ * @param {object} matchFriend 
  */
 function sendEmail(newFriend, matchFriend) {
     // nodemailer
-    mailOptions.to = newFriend;
-    mailOptions.text = `Found at ${matchFriend}`;
-    console.log(`transporter.sendMail mailOptions.to ${mailOptions.to} matchFriend: ${matchFriend}`);
+    mailOptions.to = newFriend.email;
+    mailOptions.text = `Your perfect match is ${matchFriend.name} found at ${matchFriend.email}`;
+    console.log(`transporter.sendMail mailOptions.to ${mailOptions.to} matchFriend: ${matchFriend.email}`);
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
             console.log(error);
