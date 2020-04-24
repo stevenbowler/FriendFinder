@@ -4,6 +4,8 @@ var express = require("express");
 var path = require("path");
 var friends = require("./app/data/friends.js");
 var app = express();
+require("dotenv").config();
+
 
 
 const apiRoutes = require('./app/routing/apiRoutes');

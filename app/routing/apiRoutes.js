@@ -11,10 +11,12 @@ Your `apiRoutes.js` file should contain two routes:
 // Dependencies
 // =============================================================
 var express = require("express");
+var router = express();
 var path = require("path");
 var fs = require("fs");
 var friends = require("../data/friends");
-var router = express();
+require("dotenv").config();
+var sendMail = require("../../utilities/nodemailer");
 
 
 /**
@@ -76,6 +78,9 @@ const findMatch = (newFriend) => {
 // =============================================================
 
 // Basic route that sends the user first to the AJAX Page
+/**
+ * @route
+ */
 router.get("/home", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
 });
@@ -110,6 +115,7 @@ router.post("/friends", function (req, res) {
     friends.push(newFriend);
     console.log(matchFriend);
     updateFriendsJS(friends);
+    sendMail(newFriend.email, matchFriend.email);  // send both parties and email that they have found their match
     res.json(matchFriend);
 });
 
