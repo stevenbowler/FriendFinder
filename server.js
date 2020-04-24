@@ -1,3 +1,4 @@
+//@ts-check
 // Dependencies
 // =============================================================
 var express = require("express");

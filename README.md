@@ -14,7 +14,7 @@ To use the app click [FriendFinder](https://intense-ravine-38720.herokuapp.com/)
 2. From the survey page, all fields are required:
     1. Enter `name` up to 256 characters
     2. Enter a `picture` string which should be in the format "https://www.yourSite.com/yourPicture.jpg"
-    3. Enter an `email address`
+    3. Enter an `email address`. *Provide valid email to receive contact info regarding your soulmate match via email.*
     4. Respond to the 10 required questions
     5. Click `Submit` button
 3. Rejoice - you have found your soulmate

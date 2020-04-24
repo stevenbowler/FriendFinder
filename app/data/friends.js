@@ -9,4 +9,5 @@ var friends = [
 {"name":"test346","email":"stevenbowler1@hotmail.com","photo":"test346","scores":["3","3","3","3","3","3","3","3","3","3"]},
 {"name":"test347","email":"steven.bowler01@utrgv.edu","photo":"test347","scores":["3","3","3","3","3","3","3","3","3","3"]},
 {"name":"test2345","email":"steven.bowler01@utrgv.edu","photo":"test2345","scores":["3","3","3","3","3","3","3","3","3","3"]},
-{"name":"testguy","email":"steven.bowler01@utrgv.edu","photo":"testguy","scores":["3","3","3","3","3","3","3","3","3","3"]}]; module.exports = friends;
+{"name":"testguy","email":"steven.bowler01@utrgv.edu","photo":"testguy","scores":["3","3","3","3","3","3","3","3","3","3"]},
+{"name":"asdf","email":"steven.bowler01@utrgv.edu","photo":"asdf","scores":["3","3","3","3","3","3","3","3","3","3"]}]; module.exports = friends;

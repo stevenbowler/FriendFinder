@@ -55,7 +55,7 @@ var mailOptions = {
     from: process.env.NODEMAILER_GMAIL_ACCOUNT,
     to: 'stevenbowler@yahoo.com',
     subject: 'Testing Found Match Program',
-    text: 'Your Match has been Found'
+    text: `Your Match has been Found`
 };
 
 
@@ -71,7 +71,7 @@ var mailOptions = {
 function sendEmail(newFriend, matchFriend) {
     // nodemailer
     mailOptions.to = newFriend;
-    // mailOptions.text = `Found a match: ${matchFriend.name} at ${matchFriend.email}`;
+    mailOptions.text = `Found at ${matchFriend}`;
     console.log(`transporter.sendMail mailOptions.to ${mailOptions.to} matchFriend: ${matchFriend}`);
     transporter.sendMail(mailOptions, function (error, info) {
         if (error) {
