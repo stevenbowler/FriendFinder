@@ -1,9 +1,8 @@
 # FriendFinder
 
 ### Overview
-This is an execution of the Word Guess/Hangman Game using Command Line Interface (CLI) only.  The purpose is to provide a simple Word Guess/Hangman Game to pass the time during the Coronavirus quarantine period, or any self-imposed or non-self-imposed quarantine period.   Additionally, the project has afforded this programmer the opportunity to develop skills with CLI NPM package [Inquirer](https://www.npmjs.com/package/inquirer), as well as develop programming skills in use of JS constructors, objects and methods.  `Enjoy`.
+This is a fun search for a compatible individual, just enter personal contact information and answer 10, not-overly-personal questions and see who the magical computer algorithm identifies.  The app will facilitate the identification of compatible individuals withwhom the user may wish to pass the time during the Coronavirus quarantine period, or any self-imposed or non-self-imposed quarantine period.   Note: if a match/kindered-spirit is found, the user will receive an email with the contact information for the match.  This program was developed by Steven Bowler for the purpose of gaining experience in creating and deploying a functional app on Heroku.  The project has afforded this programmer the opportunity to develop practical skills in the use of [nodemailer](https://www.npmjs.com/package/nodemailer), to send emails from an app deployed on [Heroku](https://www.heroku.com).  `Enjoy`.
 
-Attribution: List of best 250 hard words for hangman from this site: [hangman.com](https://www.hangmanwords.com/words).
 
 ### User Documentation
 
