@@ -30,4 +30,10 @@ For the email notifications with gmail to work requires [dotenv](https://www.npm
 NODEMAILER_GMAIL_ACCOUNT=*your_gmail_address*
 NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
 ````
+
+ATTENTION: to deploy to Heroku then following `git push heroku master` command, and before accessing the app page, will be necesary to set the two environmental variables with these commands from the Heroku CLI:
+````
+heroku config:set NODEMAILER_GMAIL_ACCOUNT=*your_gmail_address*
+heroku config:set NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
+````
 To use email other than gmail as host, will require setup and debug in a similar fashion, including assignments to the appropriate email address and password variables in the [nodemailer.js](https://stevenbowler.github.io/FriendFinder/docs/utilities_nodemailer.js.html) file.
