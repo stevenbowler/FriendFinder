@@ -24,7 +24,7 @@ require("dotenv").config();
  * 
  *  assumes your gmail account has "access for less secure apps" enabled
  * @namespace transporter
- * @memberof nodemailer
+ * @memberof senEmail
  * @type {*}
  * @function createTransport
  * @property {string} service Name of email service such as "gmail" or "linode"
@@ -44,7 +44,7 @@ var transporter = nodemailer.createTransport({
 /**
  * Parameter object for call to {@link sendEmail}, assumes npm package dotenv installed and .env file in place
  * @namespace mailOptions
- * @memberof nodemailer
+ * @memberof sendEmail
  * @type {object}
  * @property {string} from The sending gmail/email account
  * @property {string} to The receiving email account

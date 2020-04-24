@@ -48,69 +48,21 @@
 <p>This is an execution of the Word Guess/Hangman Game using Command Line Interface (CLI) only.  The purpose is to provide a simple Word Guess/Hangman Game to pass the time during the Coronavirus quarantine period, or any self-imposed or non-self-imposed quarantine period.   Additionally, the project has afforded this programmer the opportunity to develop skills with CLI NPM package <a href="https://www.npmjs.com/package/inquirer">Inquirer</a>, as well as develop programming skills in use of JS constructors, objects and methods.  <code>Enjoy</code>.</p>
 <p>Attribution: List of best 250 hard words for hangman from this site: <a href="https://www.hangmanwords.com/words">hangman.com</a>.</p>
 <h3>User Documentation</h3>
-<p>First, watch this video: <em><em><a href="https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view">FriendFinder</a></em></em></p>
-<p>To use the app click <a href="https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view">FriendFinder</a></p>
+<p>First, watch this video: <em><em><a href="https://drive.google.com/file/d/1Kyg4pH1CS2qgeg0UL-o6Z4PXpzuNhe-v/view">FriendFinder</a></em></em></p>
+<p>To use the app click <a href="https://intense-ravine-38720.herokuapp.com/">FriendFinder</a></p>
 <ol>
-<li>Enter <code>node index</code></li>
-<li>Will display <code>The word is: _ _ _ _ _ _</code> where underscores show number of letters in the word.</li>
-<li>You will be prompted <code>Guess the next letter?</code></li>
-<li>Enter one letter guess and press <code>enter</code> key</li>
-<li>Console log will display status of guesses, bad guesses and remaining bad guesses.</li>
-<li>Repeat steps 3. thru 5. until you either solve the word or fail.</li>
-<li>See clips below for examples.</li>
+<li>From the home page click the <code>Go to Survey</code> button</li>
+<li>From the survey page, all fields are required:
+<ol>
+<li>Enter <code>name</code> up to 256 characters</li>
+<li>Enter a <code>picture</code> string which should be in the format &quot;https://www.yourSite.com/yourPicture.jpg&quot;</li>
+<li>Enter an <code>email address</code></li>
+<li>Respond to the 10 required questions</li>
+<li>Click <code>Submit</code> button</li>
 </ol>
-<p>Enter <code>node index</code> get prompted for input</p>
-<pre class="prettyprint source"><code>$ node index
-The word is: _ _ _ _ _ 
-? Guess the next letter?
-</code></pre>
-<p>Enter one letter and press <code>enter</code> key, console log will display status</p>
-<pre class="prettyprint source"><code>? Guess the next letter?  u
-The word is: _ _ _ _ _
-badGuesses: u  Bad Guesses Used: 1 of 11
-</code></pre>
-<p>Repeat guessing letters, status will update each time</p>
-<pre class="prettyprint source"><code>? Guess the next letter?  y
-The word is: _ _ y _ _     
-badGuesses: u  Bad Guesses Used: 1 of 11
-
-? Guess the next letter?  t
-The word is: _ _ y _ _     
-badGuesses: u t  Bad Guesses Used: 2 of 11
-
-? Guess the next letter?  e
-The word is: _ _ y _ _     
-badGuesses: u t e  Bad Guesses Used: 3 of 11
-
-? Guess the next letter?  z
-The word is: _ _ y _ _     
-badGuesses: u t e z  Bad Guesses Used: 4 of 11
-
-? Guess the next letter?  r
-The word is: _ _ y _ _     
-badGuesses: u t e z r  Bad Guesses Used: 5 of 11
-
-? Guess the next letter?  b
-The word is: _ _ y _ _     
-badGuesses: u t e z r b  Bad Guesses Used: 6 of 11
-
-? Guess the next letter?  h
-The word is: _ _ y _ h     
-badGuesses: u t e z r b  Bad Guesses Used: 6 of 11
-
-? Guess the next letter?  p
-The word is: _ _ y p h
-badGuesses: u t e z r b  Bad Guesses Used: 6 of 11
-
-? Guess the next letter?  g
-The word is: g _ y p h
-badGuesses: u t e z r b  Bad Guesses Used: 6 of 11
-
-? Guess the next letter?  l
-The word is: g l y p h
-badGuesses: u t e z r b  Bad Guesses Used: 6 of 11
-congratulations it was glyph
-</code></pre>
+</li>
+<li>Rejoice - you have found your soulmate</li>
+</ol>
 <h3>Program Documentation</h3>
 <p>Main module and class references can be accessed <a href="https://stevenbowler.github.io/FriendFinder/docs/index.html">here</a>.  Global scope variables can be accessed <a href="https://stevenbowler.github.io/FriendFinder/docs/global.html">here</a>,</p>
 <p>Deploy app thru <a href="https://www.heroku.com">Heroku</a>.</p>
@@ -129,13 +81,13 @@ NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
 </div>
 
 <nav>
-    <h2><a href="index.html">FriendFinder</a></h2><h3>Modules</h3><ul><li><a href="module-sendEmail.html">sendEmail</a></li></ul><h3>Namespaces</h3><ul><li><a href="nodemailer.mailOptions.html">mailOptions</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findMatch">findMatch</a></li><li><a href="global.html#updateFriendsJS">updateFriendsJS</a></li></ul>
+    <h2><a href="index.html">FriendFinder</a></h2><h3>Modules</h3><ul><li><a href="module-sendEmail.html">sendEmail</a></li></ul><h3>Namespaces</h3><ul><li><a href="sendEmail.mailOptions.html">mailOptions</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findMatch">findMatch</a></li><li><a href="global.html#updateFriendsJS">updateFriendsJS</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Apr 24 2020 10:16:22 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Apr 24 2020 11:28:06 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>
