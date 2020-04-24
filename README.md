@@ -6,9 +6,10 @@ This is an execution of the Word Guess/Hangman Game using Command Line Interface
 Attribution: List of best 250 hard words for hangman from this site: [hangman.com](https://www.hangmanwords.com/words).
 
 ### User Documentation
+
 First, watch this video: _*[FriendFinder](https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view)*_
 
-From the console terminal prompt:
+To use the app click [FriendFinder](https://drive.google.com/file/d/1xxj5cmSW5yAJsqbmiWp-kKbeFbjaZVu9/view)
 1. Enter `node index`
 2. Will display `The word is: _ _ _ _ _ _` where underscores show number of letters in the word.
 3. You will be prompted `Guess the next letter?`
@@ -75,4 +76,14 @@ congratulations it was glyph
 
 
 ### Program Documentation
-Main module and class references for Letter, Word and WordGuess-Cli can be accessed [here](https://stevenbowler.github.io/WordGuess-Cli/docs/index.html).  Global scope variables can be accessed [here](https://stevenbowler.github.io/WordGuess-Cli/docs/global.html), 
+Main module and class references can be accessed [here](https://stevenbowler.github.io/FriendFinder/docs/index.html).  Global scope variables can be accessed [here](https://stevenbowler.github.io/FriendFinder/docs/global.html), 
+
+
+Deploy app thru [Heroku](https://www.heroku.com).
+
+For the email notifications with gmail to work requires [dotenv](https://www.npmjs.com/package/dotenv) to be installed and a `.env` file must be stored in the root directory for the app.  The `.env` file must contain the app owner's gmail address and password as shown below.  Also, note the owner's gmail account must have `access for less secure apps` enabled.
+````
+NODEMAILER_GMAIL_ACCOUNT=*your_gmail_address*
+NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
+````
+To use email other than gmail as host, will require setup and debug in a similar fashion, including assignments to the appropriate email address and password variables in the [nodemailer.js](https://stevenbowler.github.io/FriendFinder/docs/nodemailer.js.html) file.
