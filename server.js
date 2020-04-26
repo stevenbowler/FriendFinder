@@ -1,15 +1,48 @@
 //@ts-check
+/**
+ * @module server
+ * @requires express
+ * @requires dotenv
+ * 
+ * @namespace server
+ */
 // Dependencies
 // =============================================================
+/**
+ * @name express
+ */
 var express = require("express");
+
+/**
+ * @name path
+ */
 var path = require("path");
+
+/**
+ * @name friends
+ */
 var friends = require("./app/data/friends.js");
-var app = express();
+
+
 require("dotenv").config();
 
 
+/**
+ * @type {object}
+ * @constant
+ * @namespace server
+ */
+var app = express();
 
+
+/**
+ * @const
+ */
 const apiRoutes = require('./app/routing/apiRoutes');
+
+/**
+ * @const
+ */
 const htmlRoutes = require('./app/routing/htmlRoutes');
 
 

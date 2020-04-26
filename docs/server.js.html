@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>JSDoc: Namespace: apiRoutes</title>
+    <title>JSDoc: Source: server.js</title>
 
     <script src="scripts/prettify/prettify.js"> </script>
     <script src="scripts/prettify/lang-css.js"> </script>
@@ -17,100 +17,86 @@
 
 <div id="main">
 
-    <h1 class="page-title">Namespace: apiRoutes</h1>
+    <h1 class="page-title">Source: server.js</h1>
 
     
 
 
 
-
-<section>
-
-<header>
     
-        <h2>
-            <span class="ancestors"><a href="module-router_apiRoutes.html">router/apiRoutes</a>~</span>apiRoutes</h2>
-        
-    
-</header>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>//@ts-check
+/**
+ * @module server
+ * @requires express
+ * @requires dotenv
+ * 
+ * @namespace server
+ */
+// Dependencies
+// =============================================================
+/**
+ * @name express
+ */
+var express = require("express");
 
-<article>
-    <div class="container-overview">
-    
-        
-            <div class="description"><p>Express router to mount user related functions on.</p></div>
-        
+/**
+ * @name path
+ */
+var path = require("path");
 
-        
-
-
-<dl class="details">
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="app_routing_apiRoutes.js.html">app/routing/apiRoutes.js</a>, <a href="app_routing_apiRoutes.js.html#line44">line 44</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-</dl>
+/**
+ * @name friends
+ */
+var friends = require("./app/data/friends.js");
 
 
-        
-    
-    </div>
+require("dotenv").config();
 
-    
 
-    
+/**
+ * @type {object}
+ * @constant
+ * @namespace server
+ */
+var app = express();
 
-    
 
-    
+/**
+ * @const
+ */
+const apiRoutes = require('./app/routing/apiRoutes');
 
-    
+/**
+ * @const
+ */
+const htmlRoutes = require('./app/routing/htmlRoutes');
 
-    
 
-    
+//Middelware
+// Sets up the Express app to handle data parsing
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static('app/public'));
 
-    
+//Import routes
+app.use('/api', apiRoutes);
+app.use('/', htmlRoutes);
 
-    
 
-    
-</article>
+// Sets up the Express App var PORT = process.env.PORT || 3000;
+// =============================================================
+var PORT = process.env.PORT || 3000;
 
-</section>
+// Starts the server to begin listening
+// =============================================================
+app.listen(PORT, function () {
+    console.log("Server listening on: http://localhost:" + PORT);
+});
+</code></pre>
+        </article>
+    </section>
 
 
 
