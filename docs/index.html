@@ -45,7 +45,7 @@
     <section>
         <article><h1>FriendFinder</h1>
 <h3>Overview</h3>
-<p>This is a fun search for a compatible individual, just enter personal contact information and answer 10, not-overly-personal questions and see who the magical computer algorithm identifies.  The app will facilitate the identification of compatible individuals withwhom the user may wish to pass the time during the Coronavirus quarantine period, or any self-imposed or non-self-imposed quarantine period.   Note: if a match/kindered-spirit is found, the user will receive an email with the contact information for the match.  This program was developed by Steven Bowler for the purpose of gaining experience in creating and deploying a functional app on Heroku.  The project has afforded this programmer the opportunity to develop practical skills in the use of <a href="https://www.npmjs.com/package/nodemailer">nodemailer</a>, to send emails from an app deployed on <a href="https://www.heroku.com">Heroku</a>.  <code>Enjoy</code>.</p>
+<p>This is a fun search for a compatible individual, just enter personal contact information and answer 10, not-overly-personal questions and see who the magical computer algorithm identifies.  The app will facilitate the identification of compatible individuals with whom the user may wish to pass the time during the Coronavirus quarantine period, or any self-imposed or non-self-imposed quarantine period.   Note: if a match/kindered-spirit is found, the user will receive an email with the contact information for the match.  This program was developed by Steven Bowler for the purpose of gaining experience in creating and deploying a functional app on Heroku.  The project has afforded this programmer the opportunity to develop practical skills in the use of <a href="https://www.npmjs.com/package/nodemailer">nodemailer</a>, to send emails from an app deployed on <a href="https://www.heroku.com">Heroku</a>.  <code>Enjoy</code>.</p>
 <h3>User Documentation</h3>
 <p>First, watch this video: <em><em><a href="https://drive.google.com/file/d/1Kyg4pH1CS2qgeg0UL-o6Z4PXpzuNhe-v/view">FriendFinder</a></em></em></p>
 <p>To use the app click <a href="https://intense-ravine-38720.herokuapp.com/">FriendFinder</a></p>
@@ -66,10 +66,14 @@
 <p>Main module and class references can be accessed <a href="https://stevenbowler.github.io/FriendFinder/docs/index.html">here</a>.  Global scope variables can be accessed <a href="https://stevenbowler.github.io/FriendFinder/docs/global.html">here</a>,</p>
 <p>Deploy app thru <a href="https://www.heroku.com">Heroku</a>.</p>
 <p>For the email notifications with gmail to work requires <a href="https://www.npmjs.com/package/dotenv">dotenv</a> to be installed and a <code>.env</code> file must be stored in the root directory for the app.  The <code>.env</code> file must contain the app owner's gmail address and password as shown below.  Also, note the owner's gmail account must have <code>access for less secure apps</code> enabled.</p>
-<pre class="prettyprint source"><code>NODEMAILER_GMAIL_ACCOUNT=*your_gmail_address*
-NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
+<pre class="prettyprint source"><code>NODEMAILER_GMAIL_ACCOUNT=your_gmail_address
+NODEMAILER_GMAIL_PASSWORD=your_gmail_password
 </code></pre>
-<p>To use email other than gmail as host, will require setup and debug in a similar fashion, including assignments to the appropriate email address and password variables in the <a href="https://stevenbowler.github.io/FriendFinder/docs/nodemailer.js.html">nodemailer.js</a> file.</p></article>
+<p>ATTENTION: to deploy to Heroku then following <code>git push heroku master</code> command, and before accessing the app page, will be necesary to set the two environmental variables with these commands from the Heroku CLI:</p>
+<pre class="prettyprint source"><code>heroku config:set NODEMAILER_GMAIL_ACCOUNT=your_gmail_address
+heroku config:set NODEMAILER_GMAIL_PASSWORD=your_gmail_password
+</code></pre>
+<p>To use email other than gmail as host, will require setup and debug in a similar fashion, including assignments to the appropriate email address and password variables in the <a href="https://stevenbowler.github.io/FriendFinder/docs/utilities_nodemailer.js.html">nodemailer.js</a> file.</p></article>
     </section>
 
 
@@ -80,13 +84,13 @@ NODEMAILER_GMAIL_PASSWORD=*your_gmail_password*
 </div>
 
 <nav>
-    <h2><a href="index.html">FriendFinder</a></h2><h3>Modules</h3><ul><li><a href="module-sendEmail.html">sendEmail</a></li></ul><h3>Namespaces</h3><ul><li><a href="sendEmail.mailOptions.html">mailOptions</a></li></ul><h3>Global</h3><ul><li><a href="global.html#findMatch">findMatch</a></li><li><a href="global.html#updateFriendsJS">updateFriendsJS</a></li></ul>
+    <h2><a href="index.html">FriendFinder</a></h2><h3>Modules</h3><ul><li><a href="module-router_apiRoutes.html">router/apiRoutes</a></li><li><a href="module-router_htmlRoutes.html">router/htmlRoutes</a></li><li><a href="module-sendEmail.html">sendEmail</a></li></ul><h3>Namespaces</h3><ul><li><a href="module-router_apiRoutes-apiRoutes.html">apiRoutes</a></li><li><a href="module-router_htmlRoutes-htmlRoutes.html">htmlRoutes</a></li><li><a href="sendEmail.mailOptions.html">mailOptions</a></li></ul>
 </nav>
 
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Fri Apr 24 2020 13:31:35 GMT-0500 (Central Daylight Time)
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.4</a> on Sat Apr 25 2020 22:41:24 GMT-0500 (Central Daylight Time)
 </footer>
 
 <script> prettyPrint(); </script>

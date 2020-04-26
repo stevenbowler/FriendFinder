@@ -1,16 +1,26 @@
-/*
-Your `htmlRoutes.js` file should include two routes:
+//@ts-check
+/** Express router providing user related routes
+ * @module router/htmlRoutes
+ * @requires express (https://www.npmjs.com/package/nodemailer)
+ * @requires path
+ * @requires ../data/friends.js
+ */
 
-   * A GET Route to `/survey` which should display the survey page.
-   * A default, catch-all route that leads to `home.html` which displays the home page.
-*/
-
-// Dependencies
-// =============================================================
+/**
+ * @name express
+ */
 var express = require("express");
-var path = require("path");
-var friends = require("../data/friends");
 
+/**
+ * @name path
+ */
+var path = require("path");
+
+/**
+ * @type {object}
+ * @constant
+ * @namespace htmlRoutes
+ */
 var router = express();
 
 
@@ -18,49 +28,32 @@ var router = express();
 // =============================================================
 
 // Basic route that sends the user first to the survey.html Page
+
+/**
+ * Sends the user to the survey page
+ * @function
+ * @name get/survey
+ * @memberof module:routers/htmlRoutes
+ * @inner
+ * @param {string} path - /survey string to get you home.
+ * @returns {File} serves survey.html 
+ */
 router.get("/survey", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/survey.html"));
 });
 
+
+/**
+ * Sends the user to the home page
+ * @function
+ * @name get/
+ * @memberof module:routers/htmlRoutes
+ * @inner
+ * @param {string} path - /survey string to get you home.
+ * @returns {File} serves home.html 
+ */
 router.get("/", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/home.html"));
-});
-
-// Displays all characters
-router.get("/api/characters", function (req, res) {
-    return res.json(characters);
-});
-
-// Displays a single character, or returns false
-router.get("/api/characters/:character", function (req, res) {
-    var chosen = req.params.character;
-
-    console.log(chosen);
-
-    for (var i = 0; i < characters.length; i++) {
-        if (chosen === characters[i].routeName) {
-            return res.json(characters[i]);
-        }
-    }
-
-    return res.json(false);
-});
-
-// Create New Characters - takes in JSON input
-router.post("/api/characters", function (req, res) {
-    // req.body hosts is equal to the JSON post sent from the user
-    // This works because of our body parsing middleware
-    var newCharacter = req.body;
-
-    // Using a RegEx Pattern to remove spaces from newCharacter
-    // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-    newCharacter.routeName = newCharacter.name.replace(/\s+/g, "").toLowerCase();
-
-    console.log(newCharacter);
-
-    characters.push(newCharacter);
-
-    res.json(newCharacter);
 });
 
 module.exports = router;
